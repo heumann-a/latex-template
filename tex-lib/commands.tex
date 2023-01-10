@@ -1,0 +1,21 @@
+\def\frontmatter{
+    \input{./title/title-page} % Titelblätter 
+    \thispagestyle{empty}
+    \cleardoublepage
+    \thispagestyle{empty}
+    \cleardoublepage
+    \pagenumbering{Roman}
+    \include{./title/abstract} % Abstract
+    \thispagestyle{empty}
+    \tableofcontents % Inhaltsverzeichnis
+    \clearpage
+}
+
+\def\backmatter{
+  \chapter{Abkürzungsverzeichnis} % Wenn english: Abbreviations
+  \input{./chapters/acronyms}
+    \listoffigures
+    \listoftables
+    \printbibliography
+    \input{./title/explanation} % Erklärung (Arbeit selbstständig verfasst)
+}

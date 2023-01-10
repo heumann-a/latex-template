@@ -1,0 +1,98 @@
+% Backend needs to match the used one, you can choose between {biber,bibtex}
+\usepackage[backend=bibtex, sorting=none, style=alphabetic]{biblatex}
+\usepackage[english, ngerman]{babel}
+\usepackage[utf8]{inputenc}
+
+% \usepackage{minted}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{ifthen}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{currfile}
+\usepackage{acronym}
+\usepackage{fancyvrb}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[headsepline, automark]{scrlayer-scrpage}
+% \usepackage{scrlayer-fancyhdr}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{makecell}
+\usepackage{lipsum}
+% --------------------
+% PACKAGE SETTINGS
+% --------------------
+
+% Library
+\addbibresource{bib/literature.bib}
+% Tikz
+\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
+% Graphics
+\graphicspath{{./pictures/}}
+
+% Colours
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+\definecolor{gray}{rgb}{0.6,0.6,0.6}
+
+% Intented verbatim env
+\DefineVerbatimEnvironment{indentVerbatim}{Verbatim}{frame=leftline, framesep=-.75cm, numbers=left, breaklines=true}
+\DefineVerbatimEnvironment{indentVerbatimX2}{Verbatim}{frame=leftline, framesep=-1.6cm, numbers=left, breaklines=true}
+\DefineVerbatimEnvironment{indentVerbatimOnly}{Verbatim}{frame=leftline, numbers=left, breaklines=true, samepage=true}
+
+% --------------------
+% STYLE SETTINGS
+% --------------------
+
+\clearpairofpagestyles
+\automark[chapter]{chapter}
+% Comment in if you want Section names in Heading instead of Chapter
+% \automark*{section}
+\ihead{\headmark}
+\ohead{\pagemark}
+\renewcommand*\chapterpagestyle{scrheadings}
+
+
+% \usepackage[T1]{fontenc}
+% \usepackage{microtype}
+% \usepackage{libertine}%  serif and sans erif
+% \usepackage[libertine]{newtxmath}
+% \usepackage[scaled=0.85]{beramono}%% mono
+% \usepackage{relsize}
+% \usepackage{calc}
+% \usepackage{changepage}
+% \usepackage{enumitem}
+% \usepackage{fvextra}
+% \usepackage[autostyle]{csquotes}
+% \usepackage[onehalfspacing]{setspace}
+% \usepackage{siunitx}
+% \usepackage{subcaption}
+% \usepackage[dvipsnames]{xcolor}
+% \usepackage{cleveref}
+% \usepackage{pgfplots}
+% \usepackage{pgfplotstable}
+% \usepackage{csquotes}
+% \usepackage{xargs}
+% \usepackage{setspace}
+% \usepackage[printonlyused]{acronym}
+% \usepackage{subfig}
+% \usepackage{floatflt}
+% \usepackage[usenames,dvipsnames]{color}
+% \usepackage{colortbl}
+% \usepackage{paralist}
+% \usepackage{array}
+% \usepackage{parskip}
+% \usepackage[right]{eurosym}
+% \usepackage[subfigure,titles]{tocloft}
+% \usepackage{wrapfig}

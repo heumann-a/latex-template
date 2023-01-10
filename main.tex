@@ -1,0 +1,59 @@
+\documentclass[12pt,
+	a4paper,
+	bibliography=totocnumbered,
+	listof=totocnumbered, 
+	headinclude,
+	captions=tableheading, 
+	numbers=noenddot]{scrbook}
+
+\input{tex-lib/includes}
+\input{tex-lib/commands}
+
+% Uncomment this option if you dont want empty pages between chapters
+% \KOMAoptions{twoside=false}
+
+
+\begin{document}
+
+\selectlanguage{ngerman}
+
+\newcommand{\Dname}{Vorname Nachname} % Hier den Namen des Bearbeiters eintragen
+\newcommand{\Dnummer}{Matrikelnummer} % Hier die Matrikelnummer eintragen
+\newcommand{\Dtitel}{Titel der Arbeit} % Hier den Titel eintragen. Ggf. muss dieser getrennt werden
+\newcommand{\Darbeit}{Bachelorarbeit,Masterarbeit} % Hier die Art der Abschlussarbeit eintragen
+\newcommand{\Dprofa}{Prof. Dr. Wolfgang Hommel} % Hier den Aufgabensteller eintragen
+\newcommand{\Dprofb}{Prof. Dr. Zweiter Prüfer} % Hier den Zweitprüfer eintragen
+\newcommand{\Dbetreuera}{Betreuer 1} % Hier den Betreuer 1 eintragen
+\newcommand{\Dbetreuerb}{Betreuer 2} % Hier den Betreuer 2 eintragen (meist alphabetisch). Falls nicht vorhanden, leer lassen. Ggf. auf der Titelseite löschen.
+\newcommand{\Dbetreuerc}{Externer Betreuer} % Hier den Betreuer 3  bzw. externen Betreuer eintragen. Falls nicht vorhanden, leer lassen. Ggf. auf der Titelseite löschen.
+\newcommand{\Dday}{01.01.2022} % Hier das Abgabedatum eintragen
+\newcommand{\Dversion}{Draft vom \today} % Wenn kein Draft mehr, sondern Endversion, dann ``Draft vom \today'' löschen
+
+% --------------------------------------------------------------------------------------
+% Cover page and Some general Pages required for thesis
+% --------------------------------------------------------------------------------------
+\frontmatter
+
+
+% --------------------------------------------------------------------------------------
+% Main Content
+% --------------------------------------------------------------------------------------
+\mainmatter
+
+\include{chapters/chapter-1}
+\include{chapters/chapter-2}
+\include{chapters/chapter-3}
+\include{chapters/chapter-4}
+\include{chapters/chapter-5}
+\include{chapters/chapter-6}
+
+% Comment this out before release
+\include{tex-lib/examples}
+
+\appendix
+
+\backmatter
+
+
+\end{document}
+
