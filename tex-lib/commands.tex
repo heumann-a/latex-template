@@ -1,11 +1,18 @@
-\def\frontmatter{
-    \input{./title/title-page} % Titelblätter 
+
+\newcommand\subfilelogo[3]{%
+\def\LOGOFILE{#2}%
+\def\RATIO{#3}%
+\subfile{#1}%
+}
+
+\renewcommand\frontmatter[2]{
+    \subfilelogo{./title/title-page}{#1}{#2} % Titelblätter 
     \thispagestyle{empty}
     \cleardoublepage
     \thispagestyle{empty}
     \cleardoublepage
     \pagenumbering{Roman}
-    \include{./title/abstract} % Abstract
+    \subfile{./title/abstract} % Abstract
     \thispagestyle{empty}
     \tableofcontents % Inhaltsverzeichnis
     \clearpage
@@ -13,9 +20,10 @@
 
 \def\backmatter{
   \chapter{Abkürzungsverzeichnis} % Wenn english: Abbreviations
-  \input{./chapters/acronyms}
+  \subfile{./chapters/acronyms}
     \listoffigures
     \listoftables
     \printbibliography
-    \input{./title/explanation} % Erklärung (Arbeit selbstständig verfasst)
+    \subfile{./title/explanation} % Erklärung (Arbeit selbstständig verfasst)
 }
+

@@ -11,8 +11,9 @@
 
 % Uncomment this option if you dont want empty pages between chapters
 % \KOMAoptions{twoside=false}
-
-
+ 
+% The Only Package thats here because everything needs to be shared to be available as preamble
+\usepackage{subfiles}
 \begin{document}
 
 \selectlanguage{ngerman}
@@ -32,7 +33,7 @@
 % --------------------------------------------------------------------------------------
 % Cover page and Some general Pages required for thesis
 % --------------------------------------------------------------------------------------
-\frontmatter
+\frontmatter{landscape}{0.1} % Filename, Ratio to textwidth
 
 
 % --------------------------------------------------------------------------------------
@@ -40,15 +41,15 @@
 % --------------------------------------------------------------------------------------
 \mainmatter
 
-\include{chapters/chapter-1}
-\include{chapters/chapter-2}
-\include{chapters/chapter-3}
-\include{chapters/chapter-4}
-\include{chapters/chapter-5}
-\include{chapters/chapter-6}
+\subfile{chapters/chapter-1}
+\subfile{chapters/chapter-2}
+\subfile{chapters/chapter-3}
+\subfile{chapters/chapter-4}
+\subfile{chapters/chapter-5}
+\subfile{chapters/chapter-6}
 
 % Comment this out before release
-\include{tex-lib/examples}
+\subfile{tex-lib/examples}
 
 \appendix
 
